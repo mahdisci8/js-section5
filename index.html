@@ -1,45 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      .c-red {
-        color: red;
-      }
-      .c-green {
-        color: green;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- <h1> this is h1 tag</h1>
-    <h1>this is h1 two</h1> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروژه to do list</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="todo-header">لیست کار ها </div>
+        <div class="input-todo">
+            <input type="text" placeholder="متن را اینجا وارد کنید ">
+            <button>
+                <i class="fa-solid fa-check"></i>
+            </button>
+        </div>
+        <ul class="todo-list">
+             <li>test <span class="icon"><i class="fas fa-trash-alt"></i></span></li>
+             <li>test <span class="icon"><i class="fas fa-trash-alt"></i></span></li>
+        </ul>
+        <div class="info-box">
+            <span>شما <span class="pendingTask"></span> تسک برای انجام دادن دارید.</span>
+            <button>پاک کردن همه</button>
+        </div>
+    </div>
 
-    <!-- <div id="div-1">
-        <span>this is span </span>
-        <p> this is p</p>
-    </div> -->
-    <!-- <button  onclick="handleClick()">click me </button>
-  <!-- <p id="p-tag"> this is p</p> -->
 
-    <!-- <button onclick="changeColor()">click me</button> -->
-    <!-- <p id="p-tag"> this is p</p> -->
 
-    <!-- <button onclick="createBox()"> click me </button> -->
 
-    <input type="text" placeholder="search" id="searchBox" onkeypress="handleSearch(event)" />
 
-    <ul id="product-list">
-      <li class="item">Apple</li>
-      <li class="item">Banana</li>
-      <li class="item">Orange</li>
-      <li class="item">Grape</li>
-      <li class="item">Strawberry</li>
-      <li class="item">Apple</li>
-    </ul>
 
-    <script src="app.js"></script>
-  </body>
+
+  <script src="app.js"></script>  
+</body>
 </html>
