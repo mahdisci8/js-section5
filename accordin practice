@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .accordin {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .accordin-title {
+        cursor: pointer;
+      }
+      .accordin-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+
+      }
+      .accordin-item.active  .accordin-content{
+        max-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordin">
+      <div class="accordin-item">
+        <h2 class="accordin-title">section 1</h2>
+        <div class="accordin-content">
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordin">
+      <div class="accordin-item">
+        <h2 class="accordin-title">section 2</h2>
+        <div class="accordin-content">
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordin">
+      <div class="accordin-item">
+        <h2 class="accordin-title">section 1</h2>
+        <div class="accordin-content">
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const allItem = document.querySelectorAll(".accordin-item");
+      allItem.forEach(function(item){
+        item.addEventListener("click", function(){
+            const isOpen = item.classList.contains('active');
+            allItem.forEach(_item => {
+                _item.classList.remove('active');
+            });
+                if(!isOpen){
+                    item.classList.add('active');
+                }
+        })
+      })
+      
+    </script>
+  </body>
+</html>
+
+
