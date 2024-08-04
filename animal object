@@ -1,0 +1,40 @@
+class Animal {
+    constructor(name, type) {
+        this.name = name;
+        this.type = type;
+
+    }
+    getName() {
+        return this.name
+    }
+    getType() {
+        return this.type
+    }
+}
+class Dog extends Animal {
+    #serialNumber = 0;
+    constructor(name, type, breed, serialNumber) {
+        super(name, type);
+        this.breed = breed;
+        this.#serialNumber = serialNumber
+
+    }
+    getBreed() {
+        return this.breed
+    }
+    getSerialNumber() {
+        if(this.#serialNumber > 0) {
+            return this.#serialNumber
+        } else {
+            return "invalid serial number"
+        }
+    }
+}
+
+
+const GermanShepherd = new Dog("Riley", "Dog", "German Shepherd", 123456789);
+console.log(GermanShepherd.getName());
+console.log(GermanShepherd.getSerialNumber());
+console.log(GermanShepherd.getType());
+console.log(GermanShepherd.getBreed());
+
